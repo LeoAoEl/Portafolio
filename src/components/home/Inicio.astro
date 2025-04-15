@@ -1,0 +1,30 @@
+---
+import Container from "@components/shared/Container.astro";
+---
+
+<section class="min-h-screen flex items-center">
+  <Container>
+    <div class="flex items-center mx-auto flex-col text-center">
+      <h1 class="mb-8">Front-end Developer</h1>
+      <p class="mb-12 prose-lg max-w-xl">
+        I'm really passionate about crafting beautiful and functional web
+        experiences. I specialize in React, TypeScript, and the latest web
+        technologies.
+      </p>
+    </div>
+    <div class="flex justify-center space-x-4">
+      <a
+        href="/projects"
+        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+      >
+        View Projects
+      </a>
+      <a
+        href="/profile"
+        class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+      >
+        About Me
+      </a>
+    </div>
+  </Container>
+</section>

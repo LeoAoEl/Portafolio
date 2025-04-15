@@ -1,0 +1,38 @@
+---
+import Container from "./shared/Container.astro";
+import Icons from "./shared/Icons.astro";
+---
+
+<footer class="bg-aFondo dark:bg-aFondoDark shadow-lg mt-16">
+  <Container>
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="text-center md:text-left mb-4 md:mb-0">
+        <h3 class="text-lg font-semibold text-textLight dark:text-textDark">
+          Leonel Arroyo Elizarraraz
+        </h3>
+        <p class="text-sm text-textLightMuted dark:text-textDarkMuted">
+          Front-end Developer
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 items-center">
+        <a
+          href="mailto:leonel.ayoel@gmail.com"
+          class="flex items-center gap-2 text-textLightMuted dark:text-textDarkMuted hover:text-primary transition-colors"
+        >
+          <Icons name="mdi:email" />
+          <span>Correo</span>
+        </a>
+        <a
+          href="tel:+523121355589"
+          class="flex items-center gap-2 text-textLightMuted dark:text-textDarkMuted hover:text-primary transition-colors"
+        >
+          <Icons name="mdi:phone" />
+          <span>Whatsapp</span>
+        </a>
+      </div>
+    </div>
+    <div class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400">
+      © {new Date().getFullYear()} All rights reserved.
+    </div>
+  </Container>
+</footer>

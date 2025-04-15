@@ -1,0 +1,53 @@
+---
+import { tools, UiF, front } from "@constants/skills";
+---
+
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+  <h2 class="text-2xl font-bold text-textLight dark:text-textDark mb-4">
+    Skills
+  </h2>
+  <div class="space-y-4">
+    <div>
+      <h3 class="text-lg font-semibold text-textLight dark:text-textDark mb-2">
+        Frontend
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          front.map((f) => (
+            <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm">
+              {f}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-textLight dark:text-textDark mb-2">
+        UI Frameworks
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          UiF.map((ui) => (
+            <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm">
+              {ui}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold text-textLight dark:text-textDark mb-2">
+        Tools
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {
+          tools.map((tl) => (
+            <span class="px-3 py-1 bg-primary/10 text-primary dark:bg-primary/20 rounded-full text-sm">
+              {tl}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

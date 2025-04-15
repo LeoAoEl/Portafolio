@@ -1,0 +1,44 @@
+---
+import Container from "@components/shared/Container.astro";
+
+import Skills from "./Skills.astro";
+import Education from "./Education.astro";
+import Experience from "./Experience.astro";
+import ProfileAbout from "./ProfileAbout.astro";
+import HeaderProfile from "./HeaderProfile.astro";
+import GitHubProfile from "./GitHubProfile.astro";
+import LanguageLvl from "./LanguageLvl.astro";
+---
+
+<Container>
+  <div>
+    <!-- Header Section -->
+    <HeaderProfile />
+
+    <!--  Content -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2 space-y-8">
+        <!-- About -->
+        <ProfileAbout />
+
+        <!-- Experience -->
+        <Experience />
+
+        <!-- Githubs -->
+        <GitHubProfile />
+      </div>
+
+      <!-- Right Column -->
+      <div class="space-y-8">
+        <!-- Skills -->
+        <Skills />
+
+        <!-- Lenguage -->
+        <LanguageLvl />
+
+        <!-- Education -->
+        <Education />
+      </div>
+    </div>
+  </div>
+</Container>

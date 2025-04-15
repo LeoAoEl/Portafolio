@@ -1,0 +1,48 @@
+---
+import { rutas } from "@constants/rutas";
+import { Astronav, MenuIcon, MenuItems, StickyHeader } from "astro-navbar";
+import Link from "@components/shared/Link.astro";
+import ThemeToggle from "./shared/ThemeToggle";
+---
+
+<StickyHeader
+  class="gap-6 z-20 transition-all w-full ease-in-out top-0 bg-aFondo dark:bg-aFondoDark"
+  scrollY={50}
+>
+  <div class="max-w-screen-xl mx-auto px-8 md:px-10 leading-tight">
+    <Astronav closeOnClick>
+      <div
+        class="py-4 flex justify-between items-center flex-col lg:flex-row relative w-full"
+      >
+        <div>
+          <div class="flex justify-between items-center w-full gap-4">
+            <a href="/" class="flex flex-row items-center">
+              <h1>Portafolio</h1>
+            </a>
+            <div class="block md:hidden">
+              <MenuIcon class="w-6 h-6 text-textDark" />
+            </div>
+          </div>
+        </div>
+        <MenuItems
+          class="hidden lg:flex lg:items-center lg:w-auto py-4 md:py-0"
+        >
+          <ul
+            class="flex flex-col lg:flex-row md:gap-0 gap-10 items-center mt-4 md:mt-0 justify-center"
+          >
+            {rutas.map(({ path, name }) => <Link href={path} name={name} />)}
+          </ul>
+          <div class="items-center justify-center ml-4 flex md:mt-0 mt-4">
+            <ThemeToggle client:load />
+          </div>
+        </MenuItems>
+      </div>
+    </Astronav>
+  </div>
+</StickyHeader>
+
+<style is:global>
+  .astronav-dropdown:hover .dropdown-toggle {
+    display: block;
+  }
+</style>

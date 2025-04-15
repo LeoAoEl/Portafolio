@@ -1,0 +1,41 @@
+---
+const repos = [
+  {
+    name: "Cuenta principal",
+    url: "https://github.com/Leo0114",
+    description: "Cuenta personal de GitHub",
+  },
+  {
+    name: "Cuenta alternativa",
+    url: "https://github.com/LeoAoEl",
+    description: "Cuenta Secundaria de GitHub",
+  },
+];
+---
+
+<div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+  <div class="flex items-center gap-3 mb-6">
+    <h2
+      class="text-2xl font-bold text-textLight dark:text-textDark items-center"
+    >
+      Repositorios de GitHub
+    </h2>
+  </div>
+  <div class="space-y-4">
+    {
+      repos.map((repo) => (
+        <a
+          href={repo.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary transition-colors"
+        >
+          <h3 class="text-lg font-semibold text-textLight dark:text-white mb-2">
+            {repo.name}
+          </h3>
+          <p>{repo.description}</p>
+        </a>
+      ))
+    }
+  </div>
+</div>

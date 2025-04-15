@@ -1,0 +1,28 @@
+---
+import { experience } from "@constants/exp";
+---
+
+<section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+    Experience
+  </h2>
+  <div class="space-y-6">
+    {
+      experience.map((job) => (
+        <div class="border-l-4 border-primary pl-4">
+          <h3 class="text-xl font-semibold text-textLight dark:text-textDark">
+            {job.title}
+          </h3>
+          <p class=" prose-lg">
+            {job.company} • {job.period}
+          </p>
+          <ul class="mt-2 list-disc list-inside leading-tight flex  flex-col gap-2 text-textLightMuted dark:text-textDarkMuted">
+            {job.tasks.map((task) => (
+              <li>{task}</li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>

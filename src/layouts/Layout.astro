@@ -1,0 +1,29 @@
+---
+import { ClientRouter } from "astro:transitions";
+import ScrollToTop from "@components/shared/ScrollTop";
+
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <ClientRouter />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon32.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body class="bg-lightBg dark:bg-darkBg scroll-smooth transition-colors">
+    <main>
+      <Navbar />
+      <slot />
+      <Footer />
+    </main>
+    <ScrollToTop client:visible />
+  </body>
+</html>
