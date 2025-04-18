@@ -1,0 +1,49 @@
+---
+import { SEO } from "astro-seo";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
+}
+
+const {
+  title = "Portafolio - Desarrollador Front-End",
+  description = "Desarrollador Front-End con dos años de experiencia en React, React Native y JavaScript. Apasionado por soluciones innovadoras y UX de calidad.",
+  url = "https://leonelweb.vercel.app/",
+  image = `${Astro.site?.href ?? ""}/assets/og-image.png`,
+} = Astro.props as Props;
+---
+
+<SEO
+  title={title}
+  titleTemplate="%s — Portafolio de Proyectos"
+  titleDefault="Portafolio - Desarrollador Front-End"
+  description={description}
+  canonical={url}
+  charset="utf-8"
+  noindex={false}
+  nofollow={false}
+  openGraph={{
+    basic: {
+      title,
+      type: "website",
+      image,
+      url,
+    },
+    optional: {
+      siteName: "Portafolio de Desarrollador Front-End",
+      description,
+      locale: "es_MX",
+    },
+  }}
+  extend={{
+    link: [
+      { rel: "icon", href: "/icon32.png" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
+    ],
+    meta: [{ name: "robots", content: "index,follow" }],
+  }}
+/>
