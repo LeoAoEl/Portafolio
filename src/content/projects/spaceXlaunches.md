@@ -7,7 +7,7 @@ web: "https://leo0114.github.io/SpaceXL/"
 order: 11
 build:
   - Astro
-  - Preact
+  - React
   - Tailwind
 ---
 

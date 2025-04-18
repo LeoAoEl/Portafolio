@@ -7,7 +7,7 @@ web: "https://leo0114.github.io/volcancafe/"
 order: 6
 build:
   - Astro
-  - Preact
+  - React
   - Tailwind
 ---
 

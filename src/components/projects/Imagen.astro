@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  img: ImageMetadata;
+  calidad?: string;
+  alt: string;
+  ImgClass?: string;
+  transition?: string;
+}
+const {
+  transition,
+  img,
+  calidad = "mid",
+  alt,
+  ImgClass = "rounded-lg w-[300px] h-[300px]  hover:border-2 border-indigo-400 transition-all duration-200 shadow-lg dark:shadow-black/20 object-cover object-center block",
+} = Astro.props;
+---
+
+<Image
+  src={img}
+  quality={calidad}
+  format="avif"
+  alt={alt}
+  class={ImgClass}
+  transition:name={transition}
+/>

@@ -7,7 +7,7 @@ web: "https://leo0114.github.io/Experiences/"
 order: 8
 build:
   - Astro
-  - Preact
+  - React
   - Tailwind
 ---
 

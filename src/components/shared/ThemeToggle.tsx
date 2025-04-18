@@ -36,7 +36,7 @@ const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Dark Mode"
-      className="p-2 cursor-pointer rounded-md bg-gray-200 dark:bg-primary transition-colors duration-300 focus:outline-none"
+      className="p-2 cursor-pointer rounded-md bg-slate-300 dark:bg-slate-700 transition-colors duration-300 focus:outline-none"
     >
       <div className="relative w-6 h-6">
         {/* Ícono de sol */}
@@ -50,7 +50,9 @@ const ThemeToggle = () => {
         <Icon
           icon={"lucide:moon"}
           className={`absolute top-0 left-0 w-6 h-6 transition-transform duration-300 transform ${
-            theme === "dark" ? "scale-100 opacity-100" : "scale-0 opacity-0"
+            theme === "dark"
+              ? "scale-100 opacity-100 text-textDarkMuted"
+              : "scale-0 opacity-0"
           }`}
         />
       </div>

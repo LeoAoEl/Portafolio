@@ -7,7 +7,7 @@ web: "https://pademo.vercel.app/"
 order: 4
 build:
   - Astro
-  - Preact
+  - React
   - Tailwind
 ---
 
