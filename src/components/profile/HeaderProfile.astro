@@ -2,8 +2,13 @@
 import { Image } from "astro:assets";
 import Icons from "@components/shared/Icons.astro";
 import ProfileImage from "@assets/me.avif";
-
 import DownloadCv from "./DownloadCv.astro";
+
+import { getI18N } from "@i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { title, linkedIn } = i18n.Profile;
 ---
 
 <div
@@ -29,7 +34,7 @@ import DownloadCv from "./DownloadCv.astro";
     >
       <div>
         <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
-          Leonel Elizarraraz
+          {title}
         </h1>
         <p class="mt-2 text-xl text-textLight dark:text-textDark">
           Front-end Developer
@@ -60,7 +65,7 @@ import DownloadCv from "./DownloadCv.astro";
         class="text-textLight gap-2 flex items-center dark:text-textDark hover:text-primary"
       >
         <Icons name={"mdi:linkedin"} />
-        Perfil de LinkedIn
+        {linkedIn}
       </a>
     </div>
   </div>

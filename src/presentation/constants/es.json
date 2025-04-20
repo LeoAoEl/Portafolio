@@ -1,0 +1,56 @@
+{
+    "Home": {
+        "title": "Desarrollador Front-end",
+        "body": "Me apasiona mucho crear experiencias web hermosas y funcionales. Me especializo en React, TypeScript y las últimas tecnologías web.",
+        "mainButton": "Ver Proyectos",
+        "secondaryButton": "Sobre Mí"
+    },
+    "Profile": {
+        "title": "Leonel Elizarraraz",
+        "linkedIn": "Perfil de LinkedIn",
+        "AboutTitle": "Sobre Mí",
+        "AboutBody": "Soy un Desarrollador Front-end apasionado que ama crear aplicaciones web responsivas y fáciles de usar. Me especializo en frameworks y librerías modernas de JavaScript, siempre con el objetivo de entregar código de alta calidad y mantenible que garantice experiencias de usuario excepcionales.",
+        "ExperienceTitle": "Experiencia",
+        "Experience": [
+            {
+                "title": "Desarrollador Front-end",
+                "subTitle": "Implemental Systems • Sep 2023 — Feb 2024 (6 meses)",
+                "body": [
+                    "Desarrollé una sección multilingüe para Implemental Systems utilizando Qwik y React",
+                    "Utilicé TypeScript, Tailwind CSS, Vercel Analytics y Cloudinary para el alojamiento de videos",
+                    "Implementé la internacionalización (i18n) para los idiomas español, inglés y francés"
+                ]
+            },
+            {
+                "title": "Desarrollador Móvil",
+                "subTitle": "Universidad de Colima • Sep 2022 — Ago 2023 (12 meses)",
+                "body": [
+                    "Lideré el desarrollo de una aplicación React Native para la biblioteca de la Universidad de Colima",
+                    "Apliqué Redux, Git, CSS, TypeScript y React Native Paper",
+                    "Mejoré los servicios de la biblioteca digital con una interfaz de usuario fácil de usar y eficiente"
+                ]
+            },
+            {
+                "title": "Becario",
+                "subTitle": "COSITEC • Feb 2022 — Jul 2022 (6 meses)",
+                "body": [
+                    "Finalicé cursos de bases de datos y pruebas en la plataforma Carlos Slim",
+                    "Asistí a un curso intensivo de Flutter en Udemy para aumentar las habilidades de desarrollo"
+                ]
+            }
+        ],
+        "GitHubTitle": "Repositorios de GitHub",
+        "Ghub": [
+            {
+                "title": "Cuenta Principal",
+                "url": "https://github.com/Leo0114",
+                "body": "Cuenta principal y más antigua de GitHub"
+            },
+            {
+                "title": "Cuenta Secundaria",
+                "url": "https://github.com/LeoAoEl",
+                "body": "Cuenta alternativa de GitHub"
+            }
+        ]
+    }
+}

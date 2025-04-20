@@ -14,6 +14,7 @@
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/presentation/constants/*"],
       "@interfaces/*": ["src/presentation/interfaces/*"],
+      "@ui/*": ["src/presentation/ui/*"],
       "@pages/*": ["src/pages/*"],
       "@i18n/*": ["src/i18n/*"],
       "@assets/*": ["src/assets/*"]

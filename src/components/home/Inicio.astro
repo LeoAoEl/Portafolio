@@ -1,29 +1,36 @@
 ---
+import { getLangFromUrl, useTranslatedPath } from "@i18n/utils";
+import { getI18N } from "@i18n/index";
 import Container from "@components/shared/Container.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { body, title, mainButton, secondaryButton } = i18n.Home;
 ---
 
 <section class="min-h-screen flex items-center">
   <Container>
     <div class="flex items-center mx-auto flex-col text-center">
-      <h1 class="mb-8">Front-end Developer</h1>
+      <h1 class="mb-8">{title}</h1>
       <p class="mb-12 prose-lg max-w-xl">
-        I'm really passionate about crafting beautiful and functional web
-        experiences. I specialize in React, TypeScript, and the latest web
-        technologies.
+        {body}
       </p>
     </div>
     <div class="flex justify-center space-x-4">
       <a
-        href="/projects"
+        href={translatePath("/projects/")}
         class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
       >
-        View Projects
+        {mainButton}
       </a>
       <a
-        href="/profile"
+        href={translatePath("/profile/")}
         class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
       >
-        About Me
+        {secondaryButton}
       </a>
     </div>
   </Container>

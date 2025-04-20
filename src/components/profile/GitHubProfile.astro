@@ -1,16 +1,9 @@
 ---
-const repos = [
-  {
-    name: "Cuenta principal",
-    url: "https://github.com/Leo0114",
-    description: "Cuenta personal de GitHub",
-  },
-  {
-    name: "Cuenta alternativa",
-    url: "https://github.com/LeoAoEl",
-    description: "Cuenta Secundaria de GitHub",
-  },
-];
+import { getI18N } from "@i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { GitHubTitle, Ghub } = i18n.Profile;
 ---
 
 <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
@@ -18,12 +11,12 @@ const repos = [
     <h2
       class="text-2xl font-bold text-textLight dark:text-textDark items-center"
     >
-      Repositorios de GitHub
+      {GitHubTitle}
     </h2>
   </div>
   <div class="space-y-4">
     {
-      repos.map((repo) => (
+      Ghub.map((repo) => (
         <a
           href={repo.url}
           target="_blank"
@@ -31,9 +24,9 @@ const repos = [
           class="block p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary dark:hover:border-primary transition-colors"
         >
           <h3 class="text-lg font-semibold text-textLight dark:text-white mb-2">
-            {repo.name}
+            {repo.title}
           </h3>
-          <p>{repo.description}</p>
+          <p>{repo.body}</p>
         </a>
       ))
     }

@@ -1,0 +1,56 @@
+{
+    "Home": {
+        "title": "Front-end Developer",
+        "body": "I'm really passionate about crafting beautiful and functional web experiences. I specialize in React, TypeScript, and the latest web technologies.",
+        "mainButton": "View Projects",
+        "secondaryButton": "About Me"
+    },
+    "Profile": {
+        "title": "Leonel Elizarraraz",
+        "linkedIn": "LinkedIn Profile",
+        "AboutTitle": "About Me",
+        "AboutBody": "I'm a passionate Front-end Developer who loves crafting responsive and user-friendly web applications. I specialize in modern JavaScript frameworks and libraries, always aiming to deliver top-notch, maintainable code that ensures exceptional user experiences.",
+        "ExperienceTitle": "Experience",
+        "Experience": [
+            {
+                "title": "Front-end Developer",
+                "subTitle": "Implemental Systems • Sep 2023 — Feb 2024 (6 months)",
+                "body": [
+                    "Developed a multilingual section for Implemental Systems using Qwik and React",
+                    "Utilized TypeScript, Tailwind CSS, Vercel Analytics, and Cloudinary for video hosting",
+                    "Implemented internationalization (i18n) for Spanish, English, and French languages"
+                ]
+            },
+            {
+                "title": "Mobile Developer",
+                "subTitle": "Universidad de Colima • Sep 2022 — Aug 2023 (12 months)",
+                "body": [
+                    "Led the development of a React Native app for the University of Colima library",
+                    "Applied Redux, Git, CSS, TypeScript, and React Native Paper",
+                    "Enhanced digital library services with an easy-to-use and efficient UI"
+                ]
+            },
+            {
+                "title": "Intern",
+                "subTitle": "COSITEC • Feb 2022 — Jul 2022 (6 months)",
+                "body": [
+                    "Finished database and testing courses on the Carlos Slim platform",
+                    "Attended an in-depth Flutter course on Udemy to increase development skills"
+                ]
+            }
+        ],
+        "GitHubTitle": "GitHub repositories",
+        "Ghub": [
+            {
+                "title": "Main Account",
+                "url": "https://github.com/Leo0114",
+                "body": "Main and oldest GitHub account"
+            },
+            {
+                "title": "Secondary Account",
+                "url": "https://github.com/LeoAoEl",
+                "body": "Alternate GitHub account"
+            }
+        ]
+    }
+}

@@ -1,23 +1,25 @@
 ---
-import { experience } from "@constants/exp";
+import { getI18N } from "@i18n/index";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { Experience: exp, ExperienceTitle } = i18n.Profile;
 ---
 
 <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
   <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-    Experience
+    {ExperienceTitle}
   </h2>
   <div class="space-y-6">
     {
-      experience.map((job) => (
+      exp.map((job) => (
         <div class="border-l-4 border-primary pl-4">
           <h3 class="text-xl font-semibold text-textLight dark:text-textDark">
             {job.title}
           </h3>
-          <p class=" prose-lg">
-            {job.company} • {job.period}
-          </p>
+          <p class=" prose-lg">{job.subTitle} </p>
           <ul class="mt-2 list-disc list-inside leading-tight flex  flex-col gap-2 text-textLightMuted dark:text-textDarkMuted">
-            {job.tasks.map((task) => (
+            {job.body.map((task) => (
               <li>{task}</li>
             ))}
           </ul>

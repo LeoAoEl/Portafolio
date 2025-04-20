@@ -1,8 +1,18 @@
 ---
-import { rutas } from "@constants/rutas";
 import { Astronav, MenuIcon, MenuItems, StickyHeader } from "astro-navbar";
 import Link from "@components/shared/Link.astro";
 import ThemeToggle from "./shared/ThemeToggle";
+import LanguagePicker from "@components/shared/LanguagePicker.astro";
+
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <StickyHeader
@@ -16,11 +26,11 @@ import ThemeToggle from "./shared/ThemeToggle";
       >
         <div>
           <div class="flex justify-between items-center w-full gap-4">
-            <a href="/" class="flex flex-row items-center">
+            <a href={translatePath("/")} class="flex flex-row items-center">
               <h1>Portafolio</h1>
             </a>
             <div class="block md:hidden">
-              <MenuIcon class="w-6 h-6 text-textDark" />
+              <MenuIcon class="w-6 h-6 text-textLight dark:text-textDark" />
             </div>
           </div>
         </div>
@@ -30,10 +40,15 @@ import ThemeToggle from "./shared/ThemeToggle";
           <ul
             class="flex flex-col lg:flex-row md:gap-0 gap-10 items-center mt-4 md:mt-0 justify-center"
           >
-            {rutas.map(({ path, name }) => <Link href={path} name={name} />)}
+            <Link href={translatePath("/")} name={t("nav.index")} />
+            <Link href={translatePath("/projects/")} name={t("nav.projects")} />
+            <Link href={translatePath("/profile/")} name={t("nav.profile")} />
           </ul>
-          <div class="items-center justify-center ml-4 flex md:mt-0 mt-4">
+          <div
+            class="items-center justify-center ml-0 md:ml-4 flex md:mt-0 mt-8 gap-6"
+          >
             <ThemeToggle client:load />
+            <LanguagePicker />
           </div>
         </MenuItems>
       </div>

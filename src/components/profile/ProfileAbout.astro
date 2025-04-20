@@ -1,15 +1,16 @@
 ---
+import { getI18N } from "@i18n/index";
 
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+const { AboutTitle, AboutBody } = i18n.Profile;
 ---
 
 <section class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
   <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-    About Me
+    {AboutTitle}
   </h2>
   <p class="prose-lg">
-    I'm a passionate Front-end Developer who loves crafting responsive and
-    user-friendly web applications. I specialize in modern JavaScript frameworks
-    and libraries, always aiming to deliver top-notch, maintainable code that
-    ensures exceptional user experiences.
+    {AboutBody}
   </p>
 </section>

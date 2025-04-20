@@ -1,0 +1,12 @@
+---
+import Container from "@components/shared/Container.astro";
+import ProjectCard from "@components/projects/ProjectCard.astro";
+
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Container>
+  <ProjectCard projects={projects} />
+</Container>
